@@ -8,20 +8,31 @@
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
+      padding: 0;
     }
     .ad-container {
       width: 300px;
       height: 250px;
-      margin-top: 20px;
+      margin: 20px 0;
       position: relative;
-      z-index: 1; /* Ensure ad is above other elements */
-      overflow: visible; /* Prevent clipping */
+      z-index: 1;
+      overflow: visible;
+      background: #f0f0f0;
+      display: block;
     }
-    .ad-container > div {
+    .ad-container iframe {
       width: 300px !important;
       height: 250px !important;
       display: block !important;
       visibility: visible !important;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+    .fallback-text {
+      color: #888;
+      font-size: 12px;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -29,8 +40,8 @@
   <h1>A-Ads Ad Unit Verification</h1>
   <p>This page is for verifying the A-Ads ad unit used in a Chrome extension.</p>
   <div class="ad-container">
-    <!-- Replace with your A-Ads ad unit ID, e.g., 1234567 -->
-    <script data-aa="2390188" src="https://ad.a-ads.com/2390188?size=300x250"></script>
+    <iframe src="https://ad.a-ads.com/2390188?size=300x250" scrolling="no"></iframe>
+    <p class="fallback-text">Ad unit ID: 2390188 (should show 300x250 ad above)</p>
   </div>
 </body>
 </html>
