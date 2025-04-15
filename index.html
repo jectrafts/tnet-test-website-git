@@ -4,11 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A-Ads Verification</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .ad-container {
+      width: 300px;
+      height: 250px;
+      margin-top: 20px;
+      position: relative;
+      z-index: 1; /* Ensure ad is above other elements */
+      overflow: visible; /* Prevent clipping */
+    }
+    .ad-container > div {
+      width: 300px !important;
+      height: 250px !important;
+      display: block !important;
+      visibility: visible !important;
+    }
+  </style>
 </head>
 <body>
   <h1>A-Ads Ad Unit Verification</h1>
   <p>This page is for verifying the A-Ads ad unit used in a Chrome extension.</p>
-  <!-- Replace YOUR_AD_UNIT_ID with your actual A-Ads ad unit ID -->
-  <script data-aa="2390188" src="https://ad.a-ads.com/2390188?size=300x250"></script>
+  <div class="ad-container">
+    <!-- Replace with your A-Ads ad unit ID, e.g., 1234567 -->
+    <script data-aa="2390188" src="https://ad.a-ads.com/2390188?size=300x250"></script>
+  </div>
 </body>
 </html>
